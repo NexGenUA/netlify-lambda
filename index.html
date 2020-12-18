@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Check number</title>
+</head>
+<body>
+<div class="container mt-5">
+  <div class="mb-3">
+    <label for="sn-number" class="form-label">Проверка номера (Для теста в базе записаны номера от 1 до 1
+      000 000 введите любое число в этом интервале)</label>
+    <input type="number" class="form-control w-25" id="sn-number" placeholder="Введите номер">
+    <button type="button" class="btn btn-primary mt-3" id="check-number">Проверить номер</button>
+  </div>
+  <div class="alert alert-success alert-dismissible fade show" id="success" role="alert" style="display: none;">
+    Серийный номер найден!
+  </div>
+  <div class="alert alert-warning alert-dismissible fade show" id="already" role="alert" style="display: none;">
+    Такой номер уже зарегистрирован!
+  </div>
+  <div class="alert alert-warning alert-dismissible fade show" id="warning" role="alert" style="display: none;">
+    Серийный уже зарегистрирован!
+  </div>
+  <div class="alert alert-warning alert-dismissible fade show" id="not-found" role="alert" style="display: none;">
+    Серийный номер не найден!
+  </div>
+  <div class="alert alert-success alert-dismissible fade show" id="registered" role="alert" style="display: none;">
+    Номер зарегистрирован!
+    <button class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <button type="button" class="btn btn-success" id="add-number" style="display: none;">Зарегистрировать номер</button>
+  <br>
+  <button type="button" class="btn btn-info mt-3" id="show-numbers">Показать зарегистрированные номера</button>
+  <div id="numbers"></div>
+  <div id="spinner" class="spinner-border text-info position-absolute" style="left: 50%; display: none"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="./index.js"></script>
+</body>
+</html>
